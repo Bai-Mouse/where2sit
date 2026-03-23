@@ -13,3 +13,5 @@ __pycache__/
 htmlcov/
 .coverage
 *.cover
+
+frontend/node_modules/
