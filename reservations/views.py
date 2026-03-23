@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 from django.contrib.auth.models import User
 
-from .models import Reservation, Room
+from .models import Reservation, Room, is_conflict
 
 @csrf_exempt
 def create_reservation(request):

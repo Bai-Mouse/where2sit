@@ -1,9 +1,8 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from .models import Room, Building, Reservation
-from .utils import is_conflict
+from .models import Room, Building, Reservation, is_conflict
 from datetime import datetime, timedelta
-
+from django.utils import timezone
 class ReservationTest(TestCase):
 
     def setUp(self):
@@ -12,13 +11,13 @@ class ReservationTest(TestCase):
         self.room = Room.objects.create(name="101", building=self.building)
 
     def test_valid_reservation(self):
-        start = datetime.now()
+        start = timezone.now()
         end = start + timedelta(hours=1)
 
         self.assertFalse(is_conflict(self.room, start, end))
 
     def test_conflicting_reservation(self):
-        start = datetime.now()
+        start = timezone.now()
         end = start + timedelta(hours=2)
 
         Reservation.objects.create(
