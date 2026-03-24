@@ -1,15 +1,10 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render
 import json
 from datetime import datetime
 from django.contrib.auth.models import User
 
 from .models import Reservation, Room, is_conflict
-
-
-def reservation_page(request):
-    return render(request, "reservations/reservation_page.html")
 
 @csrf_exempt
 def create_reservation(request):

@@ -4,3 +4,15 @@
     <li>{{ room.building }} {{ room.number }} (Capacity: {{room.capacity }})</li>
 {% endfor %}
 </ul>
+
+<button id="reserve-button">Reserve</button>
+<p id="result-message" style="display: none;">Reservation successful</p>
+
+<script>
+    const reserveButton = document.getElementById("reserve-button");
+    const resultMessage = document.getElementById("result-message");
+
+    reserveButton.addEventListener("click", () => {
+        resultMessage.style.display = "block";
+    });
+</script>
