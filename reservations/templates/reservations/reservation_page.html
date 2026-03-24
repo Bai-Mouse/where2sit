@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Reservation</title>
+</head>
+<body>
+    <h1>Room Reservation</h1>
+    <button id="reserve-button">Reserve</button>
+    <p id="result-message" style="display: none;">Reservation successful</p>
+
+    <script>
+        const reserveButton = document.getElementById("reserve-button");
+        const resultMessage = document.getElementById("result-message");
+
+        reserveButton.addEventListener("click", () => {
+            resultMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
