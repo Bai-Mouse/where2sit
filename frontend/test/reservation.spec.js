@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('user can reserve a room', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('http://localhost:8000');
 
   await page.click('text=Reserve');
   
