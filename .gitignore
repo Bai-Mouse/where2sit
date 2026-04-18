@@ -15,3 +15,8 @@ htmlcov/
 *.cover
 
 frontend/node_modules/
+# playwright
+node modules
+
+# .idea folder
+.idea
